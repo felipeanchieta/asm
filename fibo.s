@@ -4,7 +4,6 @@
 	.p2align 2
 
 _main:
-	; main prologue
 	stp	fp, lr, [sp, #-16]!
 	mov	fp, sp
 
@@ -38,7 +37,6 @@ exit:
 	bl	_puts
 	mov	x0, #0
 
-	; main epilogue
 	ldp	fp, lr, [sp], #16
 	ret
 
