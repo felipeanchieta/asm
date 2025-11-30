@@ -10,12 +10,11 @@ _main:
     stp   x29, x30, [sp, #-16]!
     mov   x29, sp 
 
-    mov   w19, wzr
     mov   w20, 'a'
     mov   w21, 'z'
 loop:
     bl    _getchar
-    cmp   w0, wzr
+    cmp   w0, #0
     b.lt  exit
     cmp   w0, w20
     b.hs  check_upper
