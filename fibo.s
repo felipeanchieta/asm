@@ -12,7 +12,7 @@ _main:
 
 	; back-up registers
 	stp	x19, x20, [sp, #-16]!
-	stp	x20, x21, [sp, #-16]!
+	stp	x21, x22, [sp, #-16]!
 
 	mov	x19, #0
 	mov	x20, #1
@@ -52,6 +52,7 @@ exit:
 	ret
 
 	.section __TEXT, __cstring
+
 int_format:
 	.asciz "%20llu\n"
 
